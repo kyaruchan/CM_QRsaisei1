@@ -1,6 +1,6 @@
 // ==== オフライン対応 Service Worker ====
 // 変更を配信したいときは、このバージョン番号を上げる
-const CACHE_NAME = "audio-player-v2";
+const CACHE_NAME = "audio-player-v3";
 
 // ここにオフラインで必要なファイルを列挙（同じフォルダ前提）
 const PRECACHE = [
@@ -70,4 +70,5 @@ self.addEventListener("fetch", (event) => {
       .catch(() => caches.match(req))
   );
 });
+
 
