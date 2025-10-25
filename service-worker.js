@@ -5,7 +5,7 @@ const CACHE_NAME = "audio-player-v2";
 // ここにオフラインで必要なファイルを列挙（同じフォルダ前提）
 const PRECACHE = [
   "./",
-  "./indexA.html",
+  "./index.html",
   "./manifest.json",
   "./icon-192.png",
   "./icon-512.png",
@@ -70,3 +70,4 @@ self.addEventListener("fetch", (event) => {
       .catch(() => caches.match(req))
   );
 });
+
