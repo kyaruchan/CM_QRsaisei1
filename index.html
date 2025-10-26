@@ -74,7 +74,9 @@
 
   <script>
     /* ===== 設定（ここだけ編集） ===== */
-    const AUDIO_SRC = "QR_1.mp3"; // 同じフォルダに置く
+   // どのURL形状（末尾スラ有無・index直指定）で開かれても同じ場所を指す
+    const AUDIO_SRC = new URL("./qr_1.mp3", location.href).toString();
+    document.getElementById("player").src = AUDIO_SRC;
     const CHAPTERS = [
       { label:"A", start:0.5   },
       { label:"B", start:21.5  },
@@ -141,7 +143,7 @@
       requestAnimationFrame(loopHighlight);
     }
 
-    // 数字キー 1〜9 でジャンプ
+    // 数字キー 1〜5 でジャンプ
     addEventListener("keydown", (e)=>{
       if (["INPUT","TEXTAREA"].includes(e.target?.tagName)) return;
       const n = parseInt(e.key,10);
@@ -161,6 +163,7 @@
   </script>
 </body>
 </html>
+
 
 
 
