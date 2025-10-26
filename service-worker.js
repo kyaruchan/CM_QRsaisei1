@@ -1,5 +1,5 @@
 // --- Bulletproof offline audio with Range support ---
-const CACHE_NAME = "audio-player-v10"; // ★必ず更新
+const CACHE_NAME = "audio-player-v11"; // ★必ず更新
 const PRECACHE = [
   "./",
   "./index.html",
@@ -104,5 +104,6 @@ self.addEventListener("fetch", (event) => {
     }
   })());
 });
+
 
 
