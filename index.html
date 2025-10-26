@@ -74,9 +74,8 @@
 
   <script>
     /* ===== 設定（ここだけ編集） ===== */
-   // どのURL形状（末尾スラ有無・index直指定）で開かれても同じ場所を指す
     const AUDIO_SRC = new URL("./qr_1.mp3", location.href).toString();
-    document.getElementById("player").src = AUDIO_SRC;
+
     const CHAPTERS = [
       { label:"A", start:0.5   },
       { label:"B", start:21.5  },
@@ -163,6 +162,7 @@
   </script>
 </body>
 </html>
+
 
 
 
